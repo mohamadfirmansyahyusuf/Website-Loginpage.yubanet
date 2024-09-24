@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login YUBA-NET </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: #fff;
+             background: url('bg_land.jpg') no-repeat center center fixed; /* Gambar background */
+            background-size: cover; /* Agar gambar memenuhi seluruh layar */
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 500px;
+            border: 1px solid #140505;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #e5dddd;
+        }
+
+        .logo img {
+            height: 60px;
+            margin-right: 10px;
+        }
+
+        .logo span {
+            color: hsl(75, 25%, 97%);
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .button-group button {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            padding: 10px 20px;
+            flex: 1;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .button-group button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .voucher-section {
+            margin: 15px 0;
+        }
+
+        .voucher-section input {
+            width: 90%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .login-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .login-buttons .free-button {
+            background-color: #FF0000;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            flex: 1;
+            margin-right: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .login-buttons .free-button:hover {
+            background-color: #cc0000;
+        }
+
+        .login-buttons .login-button {
+            background-color: #008000;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            flex: 1;
+            margin-left: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .login-buttons .login-button:hover {
+            background-color: #006400;
+        }
+
+        .notice {
+            color: hwb(240 97% 2%);
+            font-size: 12px;
+            margin: 10px 0;
+        }
+
+        .footer {
+            margin-top: 15px;
+            font-size: 14px;
+            color: hsl(0, 0%, 98%);
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+
+        .footer .highlight {
+            color: #090512;
+            font-weight: bold;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img src="pngimg.com - wifi_PNG62252.png" alt="Logo">
+            <span>YUBA-NET</span>
+        </div>
+        <div class="button-group">
+            <button>VOUCHER</button>
+            <button>MEMBER</button>
+
+        </div>
+
+        <div class="voucher-section">
+            <input type="text" placeholder="Masukkan KODE VOUCHER" id="voucher-code">
+        </div>
+
+        <div class="login-buttons">
+            <button class="login-button" onclick="login()">LOGIN</button>
+        </div>
+
+        <div class="notice">
+            Perhatikan penulisan <strong>huruf besar dan kecil</strong>
+        </div>
+
+        <div class="footer">
+            <p>Layanan Internet WiFi mulai</p>
+            <span class="highlight">Rp. 5.000,-</span><br>
+            Masa Aktif 1 Hari Internetan Sepuasnya</p>
+             <span class="highlight">Rp. 3.000,-</span><br>
+            Masa Aktif 6 Jam Internetan Sepuasnya</p>
+             <span class="highlight">Rp. 2.000,-</span><br>
+            Masa Aktif 4 Hari Internetan Sepuasnya</p>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            const voucher = document.getElementById('voucher-code').value;
+            if (voucher) {
+                alert('Login berhasil dengan voucher: ' + voucher);
+                // Ganti alert ini dengan proses login sebenarnya untuk Mikrotik
+            } else {
+                alert('Silakan masukkan kode voucher.');
+            }
+        }
+    </script>
+</body>
+</html>
